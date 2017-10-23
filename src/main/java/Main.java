@@ -1,6 +1,8 @@
 import fr.simplifia.input.locale.LocaleExtractor;
 import fr.simplifia.input.validator.SmpInputValidator;
 import fr.simplifia.input.validator.impl.SmpInputValidatorFactory;
+import fr.simplifia.output.SmpOutputWriter;
+import fr.simplifia.output.impl.SmpOutputWriterImpl;
 import fr.simplifia.transform.SmpDataTransformer;
 
 import java.util.Locale;
@@ -21,7 +23,7 @@ public class Main {
 
         final SmpInputValidator validator = SmpInputValidatorFactory.fromLocale(locale);
         final SmpDataTransformer transformer = new SmpDataTransformer(validator);
-        final String transformedInput = transformer.transform(input);
+        final String transformedInput = transformer.transform(input, locale);
         System.out.println(transformedInput);
     }
 }

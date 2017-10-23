@@ -13,8 +13,9 @@ public class LocaleExtractorTest {
         assertEquals(Locale.FRENCH, LocaleExtractor.toLocale("fr"));
     }
 
-    @Test //TODO
+    @Test
     public void testToLocaleEn() throws Exception {
+        assertEquals(Locale.ENGLISH, LocaleExtractor.toLocale("en"));
     }
 
     @Test(expectedExceptions = NullPointerException.class)
@@ -22,9 +23,9 @@ public class LocaleExtractorTest {
         LocaleExtractor.toLocale(null);
     }
 
-    @Test //TODO
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void testToLocaleNEmpty() throws Exception {
-
+        LocaleExtractor.toLocale("");
     }
 
 

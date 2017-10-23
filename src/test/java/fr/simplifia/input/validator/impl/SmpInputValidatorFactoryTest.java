@@ -17,7 +17,7 @@ public class SmpInputValidatorFactoryTest {
 
     @Test
     public void testFromLocaleEnglish() throws Exception {
-        assertTrue(SmpInputValidatorFactory.fromLocale(Locale.ENGLISH) instanceof SmpDefaultInputValidator);
+        assertTrue(SmpInputValidatorFactory.fromLocale(Locale.ENGLISH) instanceof SmpEnglishInputValidator);
     }
 
 }
